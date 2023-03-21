@@ -19,7 +19,7 @@ const Signin = () => {
     if (user != null) {
       navigate('/search');
     }
-  }, [user]);
+  }, [user,navigate]);
 
   return (
     <div>
