@@ -79,14 +79,7 @@ export default function SampleLayout() {
   }
 
 
-  function setFormDataFromDB() {
-    setFormData();
-
-  }
-
-
-
-  const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
     setPets(getPets(`https://api.petfinder.com/v2/animals?${buildQueryStringForAPICall()}`));
@@ -234,34 +227,34 @@ export default function SampleLayout() {
     searchString += '&page=1';
 
     let genderCriteria = [];
-    if (formData.male == true)
+    if (formData.male === true)
       genderCriteria.push('male');
-    if (formData.female == true)
+    if (formData.female === true)
       genderCriteria.push('female');
     let genderCriteriaString = genderCriteria.join(',');
     if (genderCriteriaString.length > 0)
       searchString += `&gender=${genderCriteriaString}`;
 
-    if (formData.goodWithChildren == true)
+    if (formData.goodWithChildren === true)
       searchString += '&good_with_children=true'
 
-    if (formData.goodWitDogs == true)
+    if (formData.goodWitDogs === true)
       searchString += '&good_with_dogs=true'
 
-    if (formData.goodWitCats == true)
+    if (formData.goodWitCats === true)
       searchString += '&good_with_cats=true'
 
-    if (formData.houseTrained == true)
+    if (formData.houseTrained === true)
       searchString += '&house_trained=true'
 
     let sizeCriteria = [];
-    if (formData.small == true)
+    if (formData.small === true)
       sizeCriteria.push('small');
-    if (formData.medium == true)
+    if (formData.medium === true)
       sizeCriteria.push('medium');
-    if (formData.large == true)
+    if (formData.large === true)
       sizeCriteria.push('large');
-    if (formData.xlarge == true)
+    if (formData.xlarge === true)
       sizeCriteria.push('xlarge');
     let sizeCriteriaString = sizeCriteria.join(',');
     if (sizeCriteriaString.length > 0)
@@ -280,7 +273,7 @@ function PetList(props) {
           <div className="pets-front">            
 
             {pet.photos.length > 0 && pet.photos[0].medium && (
-              <img src={pet.photos[0].medium} alt='pet image' style={{ maxHeight: "315px", objectFit: "cover"}}  />
+              <img src={pet.photos[0].medium} alt='pet' style={{ maxHeight: "315px", objectFit: "cover"}}  />
             )}
             <h2>{pet.name}</h2>           
             <p>{pet.description}</p>

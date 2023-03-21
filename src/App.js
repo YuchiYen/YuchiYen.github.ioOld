@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Protected from './components/Protected';
 import { AuthContextProvider } from './context/AuthContext';
-import Search from './pages/Search';
 import Home from './pages/Home';
 import Signin from './pages/Signin';
 import SampleLayout from './SampleLayout';
