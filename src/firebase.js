@@ -7,13 +7,15 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "YOUR FIREBASE API KEY",
-  authDomain: "YOUR FIREBASE AUTHDOMAIN",
-  projectId: "YOUR FIREBASE PROJECTID",
-  storageBucket: "YOUR FIREBASE STORAGE BUCKET",
-  messagingSenderId: "YOUR FIREBASE MESSAGESENDER ID",
-  appId: "YOUR FIREBASE APPID"
+  apiKey: "AIzaSyDolSjugFljixoR7aZMMqJsTKQhIRLH62A",
+  authDomain: "yuchi-petfinder-app.firebaseapp.com",
+  projectId: "yuchi-petfinder-app",
+  storageBucket: "yuchi-petfinder-app.appspot.com",
+  messagingSenderId: "844879274952",
+  appId: "1:844879274952:web:66d595186ecd2e7f8a16fd",
+  measurementId: "G-YYE306NEX4"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
